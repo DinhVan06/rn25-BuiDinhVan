@@ -28,15 +28,6 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .header{
   background-color: darkgray;
   height: 100px;
@@ -48,45 +39,89 @@
 section{
   display: flex;
   flex-wrap: wrap;
-  height: 700px;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-nav{
-  flex: 1;
-  width: 200px;
-  height: 100%;
+
+
+.rows{
+  padding-left: 5px;
 }
-article{
-  flex: 3;
-  width: 200px;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-aside{
-  flex: 1;
-  width: 200px;
-  height: 100%;
-  background-color: #61dafb;
-}
-article img{
-  width: 500px;
-}
-nav ul{
-  list-style-type: none;
-  padding-top: 10px;
-}
-nav ul li{
+.item{
   margin-bottom: 10px;
   border-bottom: 1px solid black;
 }
-article h1{
+.item a{
+  text-decoration: none;
+  color: black;
+}
+.item a:hover{
+  color: red;
+}
+.contain h1{
   padding-top: 10px;
 }
-aside h1{
+.contain__image{
+  text-align: center;
+}
+.contain__image img{
+  width: 100%;
+}
+.aside{
+  padding: 10px 0 0 10px;
+}
+footer{
+  background-color:darkgray;
+  height: 50px;
+  text-align: center;
   padding-top: 10px;
 }
 
-footer{
-  background-color:darkgray;
-  height: 100px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+@media (min-width: 768px)
+{
+  section {
+    flex-direction: row;
+  }
+  section nav{
+    flex: calc(25% - 10px);
+    margin-right: 10px;
+  }
+  section article{
+    flex: calc(75% - 10px);
+  }
+  section aside{
+    flex: calc(100%);
+    background-color: #61dafb;
+  }
+}
+
+@media (min-width: 1024px)
+{
+  section {
+    flex-direction: row;
+  }
+  section nav{
+    flex: calc(25% - 10px);
+    margin-right: 10px;
+  }
+  section article{
+    flex: calc(50% - 10px);
+    margin-right: 10px;
+  }
+  section aside{
+    flex: calc(25% - 10px);
+    background-color: #61dafb;
+  }
+}
+
+
