@@ -2,22 +2,38 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import imgHouse from "./image/1.jpg";
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
+  let content = 'đây là props';
+  let numberProps = 18;
+  let isLogin = false;
   return (
-    <div>
-      <header>
+    <>
+      {/* <header>
         <div className="header">
           <h1>The Pulpit Rock</h1>
         </div>
-      </header>
+      </header> */}
+
+
+      {/* cách truyền props trong class components */}
+      <Header contentProps = {content} numberProps = {numberProps} loginProps = {isLogin}/> 
       <section>
         <nav>
           <ul className="rows">
-            <li className="item"><a href="#">The Drive</a></li>
-            <li className="item"><a href="#">The Walk</a></li>
-            <li className="item"><a href="#">The Return</a></li>
-            <li className="item"><a href="#">The End</a></li>
+            <li className="item">
+              <a href="#">The Drive</a>
+            </li>
+            <li className="item">
+              <a href="#">The Walk</a>
+            </li>
+            <li className="item">
+              <a href="#">The Return</a>
+            </li>
+            <li className="item">
+              <a href="#">The End</a>
+            </li>
           </ul>
         </nav>
         <article>
@@ -36,7 +52,9 @@ function App() {
         <aside>
           <div className="aside">
             <h1>What?</h1>
-            <p>The Pulpit Rock is a part of a moutain that looks like a pulpit</p>
+            <p>
+              The Pulpit Rock is a part of a moutain that looks like a pulpit
+            </p>
             <h1>Where?</h1>
             <p>The Pulpit Rock is in Norway</p>
             <h1>Price?</h1>
@@ -44,8 +62,9 @@ function App() {
           </div>
         </aside>
       </section>
-      <footer>Resize the browser window to see how the content respond to the resizing.</footer>
-    </div>
+      {/* <footer>Resize the browser window to see how the content respond to the resizing.</footer> */}
+      <Footer contentFooterProps = {content} numberFooterProps = {numberProps}/>
+    </>
   );
 }
 
