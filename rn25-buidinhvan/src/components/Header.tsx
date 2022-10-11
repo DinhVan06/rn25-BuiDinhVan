@@ -23,7 +23,7 @@ export default class Header extends Component<Props, State> {
         </header>
 
         <button className="btn btn-success">
-          {!this.props.loginProps ? "Login" : "Logout"}
+          {!this.props.loginProps ? "Log in" : "Log out"}
         </button>
         <p>{this.props.contentProps}</p>
         <p>{this.props.numberProps}</p>
