@@ -172,7 +172,7 @@ function Person({}: Props) {
         <div className="col-3">
           <div className={styles.personal_info}>
             <div style={{ width: "100%" }}>
-              <Avatar image={"block-ui-image/3.jpg"} />
+              <Avatar image={"block-ui-image/4.jpg"} />
             </div>
             <div className={styles.personal__name_education}>
               <TextPerson name="TOM HANKS" job="UI Deigner" />
