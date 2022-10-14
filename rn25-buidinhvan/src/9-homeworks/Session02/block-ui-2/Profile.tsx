@@ -1,13 +1,15 @@
 import React from "react";
+
+import "../block-ui-2/Block-ui-2.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileAndroid } from "@fortawesome/free-solid-svg-icons";
 
 interface DataProfileProps {
   data: {
-    icon: string;
-    name: string;
-    color: string;
-    follower: number;
+    icon?: string;
+    name?: string;
+    color?: string;
+    follower?: number;
   };
 }
 

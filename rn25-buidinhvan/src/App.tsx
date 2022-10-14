@@ -1,50 +1,44 @@
 import React, { Profiler } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "./9-homeworks/Basic.css";
-import "./9-homeworks/Block.css";
+
 // import imgHouse from "./image/1.jpg";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import imageBasic1 from "./9-homeworks/Session02/basic-images/1.jpg";
-import Basic1 from "./9-homeworks/Session02/Basic01";
-import Basic2 from "./9-homeworks/Session02/Basic02";
-import Basic3 from "./9-homeworks/Session02/Basic03";
-import CharBar1 from "./9-homeworks/Session02/ChartBar1";
-import Profile from "./9-homeworks/Session02/Profile";
-import CocialBlock from "./9-homeworks/Session02/SocialBlock";
+import Profile from "./9-homeworks/Session02/block-ui-2/Profile";
+import BTNumber from "./components/example-12-10/BTNumber";
+import BTNumberFuntionnal from "./components/example-12-10/BTNumberFuntionnal";
+import State from "./components/example-12-10/index";
+import Basic1 from "./9-homeworks/Session02/basic01/index";
+import Basic2 from "./9-homeworks/Session02/basic02";
+import Basic3 from "./9-homeworks/Session02/basic03";
+import ChartBar from "./9-homeworks/Session02/block-ui-1/index";
+import Socialblock from "./9-homeworks/Session02/block-ui-3";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMailchimp, faFacebookF, faTwitter, faGooglePlusG, faFontAwesome, faPinterest} from '@fortawesome/free-brands-svg-icons';
+import { faCalendarDays, faVoicemail} from '@fortawesome/free-solid-svg-icons';
+import ChartColumnProps from "./9-homeworks/Session02/block-ui-4";
+import Person from "./9-homeworks/Session02/block-ui/Person";
+
 function App() {
+  library.add(faTwitter, faFontAwesome, faFacebookF, faGooglePlusG, faPinterest, faCalendarDays, faVoicemail);
   // let content = "đây là props";
   // let numberProps = 18;
   // let isLogin = false;
 
   // block-ui-1
-  let dataRatings = [
-    { name: "BANDWIDTH", color: "#E54D4C", value: 20 },
-    { name: "STORAGE", color: "#2EB9CE", value: 50 },
-    { name: "USERS", color: "#4AC25E", value: 70 },
-    { name: "VISITORS", color: "#E9C318", value: 30 },
-    { name: "EMAILS", color: "#BB70D5", value: 45 },
-    { name: "BASIC", color: "#EB59D4", value: 80 },
-    { name: "OTHERS", color: "#5892DB", value: 37 },
-  ];
+  
 
   // block-ui-2
-  let proFile = [
-    { icon: "", name: "HTML", color: "#51D567",follower:60},
-    { icon: "", name: "CSS", color: "#F65354" ,follower:50},
-    { icon: "", name: "PHP", color: "#34C8DF" ,follower:30},
-    { icon: "", name: "JAVA", color: "#FFD700" ,follower:70}, 
-    { icon: "", name: ".NET", color: "#BA55D3" ,follower:40},
-  ];
-
-  // block-ui-3
-  let socialBlock = [
-    {text: "Likes", color:"#619BEC", iconName:"Facebook", total:50},
-    {text: "Tweets", color:"#31C8DD", iconName:"Twitter", total:40},
-    {text: "Plus", color:"#F78153", iconName:"GooGle +", total:46},
-    {text: "Pins", color:"#F75354", iconName:"Pinterest", total:34},
-  ];
+  // let proFile = [
+  //   { icon: "", name: "HTML", color: "#51D567",follower:60},
+  //   { icon: "", name: "CSS", color: "#F65354" ,follower:50},
+  //   { icon: "", name: "PHP", color: "#34C8DF" ,follower:30},
+  //   { icon: "", name: "JAVA", color: "#FFD700" ,follower:70}, 
+  //   { icon: "", name: ".NET", color: "#BA55D3" ,follower:40},
+  // ];
+  
   return (
     <>
       {/* <header>
@@ -104,7 +98,7 @@ function App() {
       </section> */}
       {/* <footer>Resize the browser window to see how the content respond to the resizing.</footer> */}
       {/* <Footer contentFooterProps={content} numberFooterProps={numberProps} /> */}
-      <h2>Bài tập bắt buộc</h2>
+      {/* <h2>Bài tập bắt buộc</h2>
       <div className="container">
         <div className="row">
           <div className="col-5">
@@ -121,21 +115,7 @@ function App() {
       <hr />
       <h2>Bài tập luyện tập</h2>
       <h3>Bài block-ui-1</h3>
-      <div>
-        <CharBar1 data={dataRatings[0]} />
-        <br />
-        <CharBar1 data={dataRatings[1]} />
-        <br />
-        <CharBar1 data={dataRatings[2]} />
-        <br />
-        <CharBar1 data={dataRatings[3]} />
-        <br />
-        <CharBar1 data={dataRatings[4]} />
-        <br />
-        <CharBar1 data={dataRatings[5]} />
-        <br />
-        <CharBar1 data={dataRatings[6]} />
-      </div>
+      
       <hr />
       <h3>Bài block-ui-2</h3>
       <div>
@@ -151,8 +131,22 @@ function App() {
       </div>
 
       <hr />
-      <h3>Bài block-ui-3</h3>
+      <h3>Bài block-ui-3</h3> */}
         {/* <CocialBlock cocial1 ={socialBlock}/> */}
+
+        {/* <hr />
+        <div><BTNumber/></div> */}
+
+        {/* <BTNumberFuntionnal/> */}
+        {/* <State /> */}
+        {/* <Basic1/> */}
+        {/* <Basic2/> */}
+        {/* <Basic3/> */}
+        {/* block-ui-1 (ChartBar) */}
+        {/* <ChartBar/> */}
+        {/* <Socialblock/> */}
+        {/* <ChartColumnProps/> */}
+        <Person />
     </>
   );
 }

@@ -1,0 +1,33 @@
+.row .col-2 {
+    padding: 0 10px;
+}
+.itemColumn{
+    width: 50%;
+    height: 70px;
+    border: 1px solid #ccc; 
+    background-color: white;
+    position: relative;
+    margin: auto
+}
+.chartColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+.columns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+.item{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

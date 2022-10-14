@@ -1,5 +1,7 @@
 import React from "react";
-import img3 from "./basic-images/3.jpg";
+
+import img3 from "../../../9-homeworks/Session02/basic-images/3.jpg";
+import "./StyleBasic03.css"
 type Props = {};
 
 function Basic03({}: Props) {

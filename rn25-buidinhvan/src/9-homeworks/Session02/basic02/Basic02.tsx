@@ -2,7 +2,8 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-import img2 from "./basic-images/2.jpg";
+import img2 from "../../../9-homeworks/Session02/basic-images/2.jpg";
+import "./StyleBasic02.css"
 type Props = {
 
 };

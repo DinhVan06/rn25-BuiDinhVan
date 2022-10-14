@@ -1,0 +1,30 @@
+.basic3{
+    border: 1px solid black;
+    margin: 5px 0 0 10px;
+    width: 500px;
+}
+.img__basic3{
+    width : 100%;
+    margin: 5px;
+    text-align: center;
+}
+.img__basic3 img{
+    width: 250px;
+    height: 200px;
+}
+.content_basic3{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.content_basic3 .content{
+    font-size: 10px;
+}
+.content_basic3 .product_name{
+    font-weight: bold; 
+}
+.content_basic3 span{
+    font-size: 10px;
+}
+.dr{
+    font-weight: bold;
+}

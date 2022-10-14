@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
 }
-
 .rating{
     margin: auto;
     width: 60%;
@@ -40,31 +39,3 @@
     height: 100%;
     padding: 11px 0 0 20px;
 }
-
-
-/*------------------------------------- */
-
-.profile{
-    margin: auto;
-    width: 60%;
-}
-.profile_color{
-    height: 30px;
-}
-.profile_row{
-    display: flex;
-}
-.profile_row_name{
-    width: 20%;
-}
-.profile_row_color{
-    width: 80%;
-    background-color: #cccccc;
-    height: 15px;
-    margin-top: 7px;
-}
-.profile_color{
-    height: 100%;
-}
-
-
