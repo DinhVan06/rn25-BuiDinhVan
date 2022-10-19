@@ -13,7 +13,6 @@ function ChartColumnProps() {
     <div>
       <div style={{ display: "flex" }}>
         <ChartColumn text="TODAY'S VISITORS" total={24.599} itemChartColumns={percentages} />
-
         <ChartColumn text="YESTERDAY'S VISITORS" total={15.699} itemChartColumns={percentages} />
         <ChartColumn text="TOTAL DOWNLOADS" total={1.24599} itemChartColumns={percentages} />
         <ChartColumn text="CURRENT INCOME" total={54.599} itemChartColumns={percentages} />

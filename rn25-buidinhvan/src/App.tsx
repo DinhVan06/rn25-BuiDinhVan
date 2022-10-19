@@ -17,16 +17,29 @@ import ChartBar from "./9-homeworks/Session02/block-ui-1/index";
 import Socialblock from "./9-homeworks/Session02/block-ui-3";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faMailchimp,
   faFacebookF,
   faTwitter,
   faGooglePlusG,
   faFontAwesome,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCalendarDays, faVoicemail } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendarDays,
+  faVoicemail,
+  faCartPlus,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faThumbsUp,
+} from "@fortawesome/free-regular-svg-icons";
 import ChartColumnProps from "./9-homeworks/Session02/block-ui-4";
 import Person from "./9-homeworks/Session02/block-ui/Person";
+import ProductUi from "./9-homeworks/Session02/block-ui-6/ProductUi";
+import Resume from "./9-homeworks/Session02/Resume1/Resume";
+import Practive from "./BT/Practive";
+import LikeNode from "./BT/Like";
+import Star from "./BT/Star";
+import IndexBasic1 from "./9-homeworks/Session4/basic1/IndexBasic1";
 
 function App() {
   library.add(
@@ -36,23 +49,20 @@ function App() {
     faGooglePlusG,
     faPinterest,
     faCalendarDays,
-    faVoicemail
+    faVoicemail,
+    faCartPlus,
+    faThumbsUp,
+    faStar
   );
-  // let content = "đây là props";
-  // let numberProps = 18;
-  // let isLogin = false;
-
-  // block-ui-1
 
   // block-ui-2
-  let proFile = [
-    { icon: "", name: "HTML", color: "#51D567", follower: 60 },
-    { icon: "", name: "CSS", color: "#F65354", follower: 50 },
-    { icon: "", name: "PHP", color: "#34C8DF", follower: 30 },
-    { icon: "", name: "JAVA", color: "#FFD700", follower: 70 },
-    { icon: "", name: ".NET", color: "#BA55D3", follower: 40 },
-  ];
-
+  // let proFile = [
+  //   { icon: "", name: "HTML", color: "#51D567", follower: 60 },
+  //   { icon: "", name: "CSS", color: "#F65354", follower: 50 },
+  //   { icon: "", name: "PHP", color: "#34C8DF", follower: 30 },
+  //   { icon: "", name: "JAVA", color: "#FFD700", follower: 70 },
+  //   { icon: "", name: ".NET", color: "#BA55D3", follower: 40 },
+  // ];
   return (
     <>
       {/* <header>
@@ -127,23 +137,6 @@ function App() {
         </div>
       </div>
       <hr />
-      <h2>Bài tập luyện tập</h2>
-      <h3>Bài block-ui-1</h3>
-      
-      <hr />
-      <h3>Bài block-ui-2</h3>
-      <div>
-        <Profile data = {proFile[0]}/>
-        <br />
-        <Profile data = {proFile[1]}/>
-        <br />
-        <Profile data = {proFile[2]}/>
-        <br />
-        <Profile data = {proFile[3]}/>
-        <br />
-        <Profile data = {proFile[4]}/>
-      </div>
-
       <hr />
       <h3>Bài block-ui-3</h3> */}
       {/* <CocialBlock cocial1 ={socialBlock}/> */}
@@ -153,16 +146,16 @@ function App() {
 
       {/* <BTNumberFuntionnal/> */}
       {/* <State /> */}
-      <h3>Basic 1,2,3</h3>
+      {/* <h3>Basic 1,2,3</h3>
       <Basic1 />
       <Basic2 />
-      <Basic3 />
+      <Basic3 /> */}
       {/* block-ui-1 (ChartBar) */}
-      <hr />
+      {/* <hr />
       <h3>Block-ui-1-ChartBar</h3>
-      <ChartBar />
+      <ChartBar /> */}
 
-      <hr />
+      {/* <hr />
       <h3>Block-ui-2-Profile</h3>
       <div>
         <Profile data={proFile[0]} />
@@ -174,19 +167,30 @@ function App() {
         <Profile data={proFile[3]} />
         <br />
         <Profile data={proFile[4]} />
-      </div>
+      </div> */}
 
-      <hr />
+      {/* <hr />
       <h3>Block-ui-3-Socialblock</h3>
-      <Socialblock />
+      <Socialblock /> */}
 
-      <hr />
+      {/* <hr />
       <h3>Block-ui-4-ChartCloumnProps</h3>
-      <ChartColumnProps />
+      <ChartColumnProps /> */}
 
-      <hr />
+      {/* <hr />
       <h3>Block-ui-5-Person</h3>
-      <Person />
+      <Person /> */}
+
+      {/* <hr />
+      <h3>Block-ui-6-product</h3>
+      <ProductUi /> */}
+      {/* <hr />
+      <h3>Resume 1</h3>
+      <Resume/> */}
+      {/* <Practive/> */}
+      {/* <LikeNode icon="fa-regular fa-thumbs-up"/> */}
+      {/* <Star/> */}
+      <IndexBasic1/>
     </>
   );
 }

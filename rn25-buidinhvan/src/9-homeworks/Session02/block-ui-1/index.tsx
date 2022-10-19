@@ -11,22 +11,13 @@ function ChartBar() {
     { name: "BASIC", color: "#EB59D4", value: 80 },
     { name: "OTHERS", color: "#5892DB", value: 37 },
   ];
+  const list = dataRatings.map(dataRating => (
+    <ChartBar1 key={dataRating.name} data={dataRating} />
+   ))
   return (
     <div>
       <div>
-        <ChartBar1 data={dataRatings[0]} />
-        <br />
-        <ChartBar1 data={dataRatings[1]} />
-        <br />
-        <ChartBar1 data={dataRatings[2]} />
-        <br />
-        <ChartBar1 data={dataRatings[3]} />
-        <br />
-        <ChartBar1 data={dataRatings[4]} />
-        <br />
-        <ChartBar1 data={dataRatings[5]} />
-        <br />
-        <ChartBar1 data={dataRatings[6]} />
+        {list}
       </div>
     </div>
   );

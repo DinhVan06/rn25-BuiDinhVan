@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "../block-ui-image/1.jpg";
-type Props = {
+interface Props{
   image?: string;
 };
 
@@ -9,7 +9,7 @@ function Avatar(props: Props) {
     <>
       <div>
         <img
-          style={{ width: "100%", height: "150px" }}
+          style={{width: '100%'}}
           src={process.env.PUBLIC_URL + props.image}
           alt=""
         />

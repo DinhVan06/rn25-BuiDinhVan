@@ -1,0 +1,11 @@
+.section{
+    display: flex;
+}
+.section_left{
+    flex: 30%;
+    background-color: aqua;
+}
+.section_right{
+    flex: 70%;
+    background-color: bisque;
+}

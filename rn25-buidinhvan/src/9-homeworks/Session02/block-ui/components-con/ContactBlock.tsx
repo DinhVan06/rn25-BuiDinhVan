@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import styles from "../../../../9-homeworks/Session02/block-ui/Person.module.css";
 
-type Props = {
+interface Props{
   contactForm?: string;
   communications?: string;
   icon?: string;
