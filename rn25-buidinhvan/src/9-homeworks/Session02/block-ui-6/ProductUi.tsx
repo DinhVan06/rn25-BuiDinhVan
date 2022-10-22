@@ -5,9 +5,10 @@ import TextPerson from "../block-ui/components-con/TextPesron";
 import AddToCart from "./components-con/AddToCart";
 interface Props {}
 
-function ProductUi({}: Props) {
+function ProductUi(props: Props) {
   var dataProducts = [
     {
+      id:1,
       images: "block-ui-image/1.jpg",
       names: "EODEM MODO TYPI",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -22,6 +23,7 @@ function ProductUi({}: Props) {
         },
     },
     {
+      id:2,
       images: "block-ui-image/2.jpg",
       names: "SEQUITUR MUTATIONEM",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -36,6 +38,7 @@ function ProductUi({}: Props) {
         },
     },
     {
+      id:3,
       images: "block-ui-image/3.jpg",
       names: "CONSUETUDIUM LECTORUM",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -50,6 +53,7 @@ function ProductUi({}: Props) {
         },
     },
     {
+      id:4,
       images: "block-ui-image/4.jpg",
       names: "PARUM CLARAM",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -68,7 +72,7 @@ function ProductUi({}: Props) {
     <div className="container" style={{ backgroundColor: "#ccc" }}>
       <div className="row">
         {dataProducts.map((dataProduct) => (
-          <div className="col-3">
+          <div key={dataProduct.id}  className="col-3">
             <div className={styles.product}>
               <div>
                 <Avatar image={dataProduct.images} />

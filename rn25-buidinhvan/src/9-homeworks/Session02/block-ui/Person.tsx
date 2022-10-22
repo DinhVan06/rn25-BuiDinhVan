@@ -44,7 +44,6 @@ function Person({}: Props) {
               <div style={{ backgroundColor: "red", width: "100%" }}>
                 <ContactBlock
                   contactForm="EMAIL ID"
-                  icon="fa fa-Voice-mailing"
                   communications="robot12@gmail.com"
                 />
               </div>
@@ -97,7 +96,6 @@ function Person({}: Props) {
               <div style={{ backgroundColor: "#00CCFF", width: "100%" }}>
                 <ContactBlock
                   contactForm="EMAIL ID"
-                  icon="fa-brands fa-Mail-Chimp"
                   communications="smith12@gmail.com"
                 />
               </div>
@@ -150,7 +148,6 @@ function Person({}: Props) {
               <div style={{ backgroundColor: "#FF6600", width: "100%" }}>
                 <ContactBlock
                   contactForm="EMAIL ID"
-                  icon="fa fa-Voice-mailing"
                   communications="peter1@gmail.com"
                 />
               </div>
@@ -203,7 +200,6 @@ function Person({}: Props) {
               <div style={{ backgroundColor: "#FF6600", width: "100%" }}>
                 <ContactBlock
                   contactForm="EMAIL ID"
-                  icon="fa-solid fa-Voice-Mail"
                   communications="peter1@gmail.com"
                 />
               </div>

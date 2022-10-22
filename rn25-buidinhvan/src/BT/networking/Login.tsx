@@ -16,22 +16,22 @@ function Login() {
     onSubmit: (values) => {
       console.log(values);
       const url = "https://63528eb7a9f3f34c37413fa8.mockapi.io/users";
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-    .then((response) => response.json())
-      .then((json) => {
-        // Xử lý kết quả JSON ở đây
-        console.log(json);
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
       })
-      .catch((error) => {
-        // Nếu có lỗi
-        console.error(error);
-      });
+        .then((response) => response.json())
+        .then((json) => {
+          // Xử lý kết quả JSON ở đây
+          console.log(json);
+        })
+        .catch((error) => {
+          // Nếu có lỗi
+          console.error(error);
+        });
     },
   });
   return (

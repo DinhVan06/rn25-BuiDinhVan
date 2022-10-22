@@ -46,14 +46,15 @@ import Practive from "./BT/Practive";
 import LikeNode from "./9-homeworks/Session05/Like";
 import StarFuntion from "./9-homeworks/Session05/Star";
 // import Star from "./BT/Star";
-import Star from "./9-homeworks/Session3/StarClassComponent/Star"
+import Star from "./9-homeworks/Session3/StarClassComponent/Star";
 import IndexBasic1 from "./9-homeworks/Session4/basic1/IndexBasic1";
 import IndexBasic2 from "./9-homeworks/Session4/basic2/IndexBasic2";
 import Rating from "./BT/Rating";
 import PractiveForm from "./BT/Form/PractiveForm";
 import MultipleIputForm from "./BT/Form/MultipleIputForm";
 import LoginFormWithYup from "./9-homeworks/Session06/LoginFormWithYup";
-import Login from "./BT/networking/Login"
+import Login from "./BT/networking/Login";
+import ShowData from "./9-homeworks/Session07/ShowData";
 function App() {
   library.add(
     faTwitter,
@@ -70,7 +71,7 @@ function App() {
     faApple,
     faPhp,
     faJava,
-    faAdn,
+    faAdn
   );
 
   return (
@@ -160,7 +161,7 @@ function App() {
       <Basic1 />
       <Basic2 />
       <Basic3 />
-      
+
       <hr />
       <h3>Block-ui-1-ChartBar</h3>
       <ChartBar />
@@ -184,16 +185,16 @@ function App() {
       <ProductUi />
       <hr />
       <h3>Sesion03-Like-ClassComponent</h3>
-      <Like/>
+      <Like />
       <hr />
       <h3>Session03-Star-ClassComponent</h3>
-      <Star/>
+      <Star />
       <hr />
       <h3>Session05-Like</h3>
-      <LikeNode icon="fa-regular fa-thumbs-up"/>
+      <LikeNode icon="fa-regular fa-thumbs-up" />
       <hr />
       <h3>Session05-Star</h3>
-      <StarFuntion/>
+      <StarFuntion />
       {/* <hr />
       <Star/> */}
       {/* <hr />
@@ -211,6 +212,9 @@ function App() {
       <h3>Session6-form đăng nhập</h3>
       <LoginFormWithYup/> 
       {/* <Login/> */}
+      <hr />
+      <h3>Sesion07 - ShowData</h3>
+      <ShowData/>
     </>
   );
 }

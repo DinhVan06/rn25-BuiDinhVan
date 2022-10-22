@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "../block-ui-image/1.jpg";
 interface Props{
   image?: string;
 };
