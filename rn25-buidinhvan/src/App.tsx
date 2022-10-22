@@ -6,7 +6,7 @@ import "./App.css";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import imageBasic1 from "./9-homeworks/Session02/basic-images/1.jpg";
-import Profile from "./9-homeworks/Session02/block-ui-2/Profile";
+
 import BTNumber from "./components/example-12-10/BTNumber";
 import BTNumberFuntionnal from "./components/example-12-10/BTNumberFuntionnal";
 import State from "./components/example-12-10/index";
@@ -14,7 +14,9 @@ import Basic1 from "./9-homeworks/Session02/basic01/index";
 import Basic2 from "./9-homeworks/Session02/basic02";
 import Basic3 from "./9-homeworks/Session02/basic03";
 import ChartBar from "./9-homeworks/Session02/block-ui-1/index";
+import ProFile from "./9-homeworks/Session02/block-ui-2/index";
 import Socialblock from "./9-homeworks/Session02/block-ui-3";
+import Like from "./9-homeworks/Session3/LikeClassComponent/Like";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebookF,
@@ -22,6 +24,11 @@ import {
   faGooglePlusG,
   faFontAwesome,
   faPinterest,
+  faAndroid,
+  faApple,
+  faPhp,
+  faJava,
+  faAdn,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faCalendarDays,
@@ -29,18 +36,24 @@ import {
   faCartPlus,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faThumbsUp,
-} from "@fortawesome/free-regular-svg-icons";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import ChartColumnProps from "./9-homeworks/Session02/block-ui-4";
 import Person from "./9-homeworks/Session02/block-ui/Person";
 import ProductUi from "./9-homeworks/Session02/block-ui-6/ProductUi";
 import Resume from "./9-homeworks/Session02/Resume1/Resume";
 import Practive from "./BT/Practive";
-import LikeNode from "./BT/Like";
-import Star from "./BT/Star";
+// import LikeNode from "./BT/Like";
+import LikeNode from "./9-homeworks/Session05/Like";
+import StarFuntion from "./9-homeworks/Session05/Star";
+// import Star from "./BT/Star";
+import Star from "./9-homeworks/Session3/StarClassComponent/Star"
 import IndexBasic1 from "./9-homeworks/Session4/basic1/IndexBasic1";
-
+import IndexBasic2 from "./9-homeworks/Session4/basic2/IndexBasic2";
+import Rating from "./BT/Rating";
+import PractiveForm from "./BT/Form/PractiveForm";
+import MultipleIputForm from "./BT/Form/MultipleIputForm";
+import LoginFormWithYup from "./9-homeworks/Session06/LoginFormWithYup";
+import Login from "./BT/networking/Login"
 function App() {
   library.add(
     faTwitter,
@@ -52,17 +65,14 @@ function App() {
     faVoicemail,
     faCartPlus,
     faThumbsUp,
-    faStar
+    faStar,
+    faAndroid,
+    faApple,
+    faPhp,
+    faJava,
+    faAdn,
   );
 
-  // block-ui-2
-  // let proFile = [
-  //   { icon: "", name: "HTML", color: "#51D567", follower: 60 },
-  //   { icon: "", name: "CSS", color: "#F65354", follower: 50 },
-  //   { icon: "", name: "PHP", color: "#34C8DF", follower: 30 },
-  //   { icon: "", name: "JAVA", color: "#FFD700", follower: 70 },
-  //   { icon: "", name: ".NET", color: "#BA55D3", follower: 40 },
-  // ];
   return (
     <>
       {/* <header>
@@ -146,51 +156,61 @@ function App() {
 
       {/* <BTNumberFuntionnal/> */}
       {/* <State /> */}
-      {/* <h3>Basic 1,2,3</h3>
+      <h3>Basic 1,2,3</h3>
       <Basic1 />
       <Basic2 />
-      <Basic3 /> */}
-      {/* block-ui-1 (ChartBar) */}
-      {/* <hr />
+      <Basic3 />
+      
+      <hr />
       <h3>Block-ui-1-ChartBar</h3>
-      <ChartBar /> */}
-
-      {/* <hr />
+      <ChartBar />
+      <hr />
       <h3>Block-ui-2-Profile</h3>
-      <div>
-        <Profile data={proFile[0]} />
-        <br />
-        <Profile data={proFile[1]} />
-        <br />
-        <Profile data={proFile[2]} />
-        <br />
-        <Profile data={proFile[3]} />
-        <br />
-        <Profile data={proFile[4]} />
-      </div> */}
-
-      {/* <hr />
+      <ProFile />
+      <hr />
       <h3>Block-ui-3-Socialblock</h3>
-      <Socialblock /> */}
+      <Socialblock />
 
-      {/* <hr />
+      <hr />
       <h3>Block-ui-4-ChartCloumnProps</h3>
-      <ChartColumnProps /> */}
+      <ChartColumnProps />
 
-      {/* <hr />
+      <hr />
       <h3>Block-ui-5-Person</h3>
-      <Person /> */}
+      <Person />
 
-      {/* <hr />
+      <hr />
       <h3>Block-ui-6-product</h3>
-      <ProductUi /> */}
+      <ProductUi />
+      <hr />
+      <h3>Sesion03-Like-ClassComponent</h3>
+      <Like/>
+      <hr />
+      <h3>Session03-Star-ClassComponent</h3>
+      <Star/>
+      <hr />
+      <h3>Session05-Like</h3>
+      <LikeNode icon="fa-regular fa-thumbs-up"/>
+      <hr />
+      <h3>Session05-Star</h3>
+      <StarFuntion/>
+      {/* <hr />
+      <Star/> */}
       {/* <hr />
       <h3>Resume 1</h3>
       <Resume/> */}
       {/* <Practive/> */}
       {/* <LikeNode icon="fa-regular fa-thumbs-up"/> */}
       {/* <Star/> */}
-      <IndexBasic1/>
+      {/* <IndexBasic1/> */}
+      {/* <IndexBasic2/> */}
+      {/* <Rating/> */}
+      {/* <PractiveForm/> */}
+      {/* <MultipleIputForm/> */}
+      <hr />
+      <h3>Session6-form đăng nhập</h3>
+      <LoginFormWithYup/> 
+      {/* <Login/> */}
     </>
   );
 }
