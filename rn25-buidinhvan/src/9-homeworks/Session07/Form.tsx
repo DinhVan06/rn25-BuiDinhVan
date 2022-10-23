@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
+interface ICity {
+  code: number;
+  name?: string;
+  codename?: string;
+  division_type?: string;
+  short_codename?: string;
+  districts: Array<IDistrict>;
+}
+interface IDistrict {
+  code: number;
+  name?: string;
+  codename?: string;
+  division_type?: string;
+  short_codename?: string;
+  wards: Array<ICommune>;
+}
+interface ICommune {
+  code: number;
+  name?: string;
+  codename?: string;
+  division_type?: string;
+  short_codename?: string;
+}
 const SignupSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email")
@@ -17,7 +39,26 @@ const SignupSchema = Yup.object({
     "Password must match"
   ),
 });
-function LoginFormWithYup() {
+function Form() {
+  const [citys, setCitys] = useState<Array<ICity>>([]);
+  const [districts, setDistriscts] = useState<Array<IDistrict>>([]);
+  const [communes, setCommunes] = useState<Array<ICommune>>([]);
+
+  useEffect(() => {
+    const getCitysss = async ()=> {
+      try {
+        const response = await fetch(
+          "https://provinces.open-api.vn/api/?depth=3"
+        );
+        console.log(response)
+        const data = await response.json();
+        setCitys(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    getCitysss();
+  }, []);
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -26,11 +67,19 @@ function LoginFormWithYup() {
     validationSchema: SignupSchema,
     onSubmit: (values) => {
       console.log(values);
+
     },
   });
-
-  const handleChange = (e: any) => {
-    console.log(e.target);
+  const handleChangeCity = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const city = { ...citys.find((x) => x.code === parseInt(e.target.value)) };
+    const districtOfCity  = city.districts ? city.districts : [];
+    setDistriscts(districtOfCity);
+    setCommunes([]);
+  };
+  const handleChangeDistrict = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const district = { ...districts.find((x) => x.code === parseInt(e.target.value)) };
+    const communesOfDistrict = district.wards ? district.wards : [];
+    setCommunes(communesOfDistrict);
   };
   return (
     <div style={{ margin: "20px", width: "700px" }}>
@@ -73,7 +122,17 @@ function LoginFormWithYup() {
             </div>
           </div>
         </div>
-        {/* <div style={{ display: "flex" }}>
+        <div style={{textAlign:"center"}}>
+            <label style={{marginBottom:"10px"}} htmlFor="Address">Address</label>
+            <br />
+            <input style={{width:'100%'}} type="text" />
+        </div>
+        <div style={{textAlign:"center"}}>
+            <label style={{marginBottom:"10px"}} htmlFor="Address2">Address2</label>
+            <br />
+            <input style={{width:'100%'}} type="text" />
+        </div>
+        <div style={{ display: "flex" }}>
           <div style={{ flex: "1", margin: "5px 5px 5px 0" }}>
             <div style={{ textAlign: "center" }}>
               <label htmlFor="city">City</label>
@@ -81,12 +140,14 @@ function LoginFormWithYup() {
             <select
               style={{ width: "100%" }}
               name="city"
-              //   value={city}
-              onChange={formik.handleChange}
+              onChange={handleChangeCity}
             >
-              <option value="HN">TP Hà Nội</option>
-              <option value="DN">TP Đà Nẵng</option>
-              <option value="TK">TP Tam Kỳ</option>
+                <option></option>
+              {citys.map((city) => (
+                <option key={city.code} value={city.code}>
+                  {city.name}
+                </option>
+              ))}
             </select>
           </div>
           <div style={{ flex: "1", margin: "5px 5px 5px 0" }}>
@@ -96,13 +157,14 @@ function LoginFormWithYup() {
             <select
               style={{ width: "100%" }}
               name="district"
-              //   value={city}
-              onChange={formik.handleChange}
+              onChange={handleChangeDistrict}
             >
-              <option value="QBĐ">Quận Ba Đình</option>
-              <option value="QBT">Quận Bình Tân</option>
-              <option value="QBT">Quận Bình Thạnh</option>
-              <option value="QCL">Quận Cẩm Lệ</option>
+                <option></option>
+              {districts.map((district) => (
+                <option key={district.code} value={district.code}>
+                  {district.name}
+                </option>
+              ))}
             </select>
           </div>
           <div style={{ flex: "1", margin: "5px 5px 5px 0" }}>
@@ -112,22 +174,26 @@ function LoginFormWithYup() {
             <select
               style={{ width: "100%" }}
               name="commune"
-              //   value={city}
-              onChange={formik.handleChange}
             >
-              <option value="HB">Hòa Bắc</option>
-              <option value="HL">Hòa Liên</option>
-              <option value="KS">Kim Sơn</option>
-              <option value="SĐ">Sơn Đông</option>
+                <option></option>
+              {communes.map((commune) => (
+                <option key={commune.code} value={commune.code}>
+                  {commune.name}
+                </option>
+              ))}
             </select>
           </div>
-        </div> */}
+        </div>
+        <div style={{marginTop:"10px"}}>
+            <input type="checkbox"/> 
+            <span style={{marginLeft:"10px"}}>Check me out</span>
+        </div>
         <div style={{textAlign:"center"}}>
-            <button style={{margin:"20px"}}>Sign in</button>
+            <button style={{margin:"20px", backgroundColor:"blue", color:"white"}}>Sign in</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default LoginFormWithYup;
+export default Form;

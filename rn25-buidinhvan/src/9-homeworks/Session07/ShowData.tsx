@@ -16,12 +16,13 @@ function ShowData({}: IUser) {
       .then((json) => {
         // Xử lý kết quả JSON ở đây
         setDataUser(json)
-        console.log(json);
       })
       .catch((error) => {
         // Nếu có lỗi
         console.error(error);
       });
+
+      console.log("11111111")
   }, []);
   return (
     <div>

@@ -55,6 +55,7 @@ import MultipleIputForm from "./BT/Form/MultipleIputForm";
 import LoginFormWithYup from "./9-homeworks/Session06/LoginFormWithYup";
 import Login from "./BT/networking/Login";
 import ShowData from "./9-homeworks/Session07/ShowData";
+import Form from "./9-homeworks/Session07/Form"
 function App() {
   library.add(
     faTwitter,
@@ -157,7 +158,7 @@ function App() {
 
       {/* <BTNumberFuntionnal/> */}
       {/* <State /> */}
-      <h3>Basic 1,2,3</h3>
+      {/* <h3>Basic 1,2,3</h3>
       <Basic1 />
       <Basic2 />
       <Basic3 />
@@ -194,7 +195,7 @@ function App() {
       <LikeNode icon="fa-regular fa-thumbs-up" />
       <hr />
       <h3>Session05-Star</h3>
-      <StarFuntion />
+      <StarFuntion /> */}
       {/* <hr />
       <Star/> */}
       {/* <hr />
@@ -208,13 +209,14 @@ function App() {
       {/* <Rating/> */}
       {/* <PractiveForm/> */}
       {/* <MultipleIputForm/> */}
-      <hr />
+      {/* <hr />
       <h3>Session6-form đăng nhập</h3>
-      <LoginFormWithYup/> 
+      <LoginFormWithYup/>  */}
       {/* <Login/> */}
-      <hr />
+      {/* <hr />
       <h3>Sesion07 - ShowData</h3>
-      <ShowData/>
+      <ShowData/> */}
+      <Form/>
     </>
   );
 }
