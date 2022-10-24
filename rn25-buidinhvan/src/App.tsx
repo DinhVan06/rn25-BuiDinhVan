@@ -55,7 +55,8 @@ import MultipleIputForm from "./BT/Form/MultipleIputForm";
 import LoginFormWithYup from "./9-homeworks/Session06/LoginFormWithYup";
 import Login from "./BT/networking/Login";
 import ShowData from "./9-homeworks/Session07/ShowData";
-import Form from "./9-homeworks/Session07/Form"
+import Form from "./9-homeworks/Session07/Form";
+import PractiveRouter from "./9-homeworks/Session08/ExercisesRouter/PractiveRouter";
 function App() {
   library.add(
     faTwitter,
@@ -212,11 +213,13 @@ function App() {
       {/* <hr />
       <h3>Session6-form đăng nhập</h3>
       <LoginFormWithYup/>  */}
-      {/* <Login/> */}
+      {/* <Login/>
+      <hr /> */}
       {/* <hr />
       <h3>Sesion07 - ShowData</h3>
       <ShowData/> */}
-      <Form/>
+      {/* <Form/> */}
+      <PractiveRouter/>
     </>
   );
 }
